@@ -1,0 +1,94 @@
+
+body{
+      font-family: "Director",monospace;
+      background-color: #d8470e;
+      padding: 0;
+      margin: 0; 
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+
+}
+
+::-moz-selection { /* Code for Firefox */
+  color: white;
+  background: blue;
+}
+
+img {
+   width: 15%;
+  min-width: 0;
+  height: auto;
+  position: fixed;
+  display: block;
+  top: 0px;
+  left: 43%;
+  text-align: center;
+  
+}
+.b {
+   display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    
+  
+}
+.soon {
+    text-align: center;
+    font-size: 1em;
+    color: white;
+    display: block;
+    position: absolute;
+    top: 280px;
+    /*position: relative;
+    top: 260px;
+    left: 100px;*/
+    
+  
+  /*background-color:blue;
+    width:9%;
+    height: auto;
+    display: block;
+*/
+  }
+
+
+.homebutton {
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+  padding: 20px;
+}
+.homedisp {
+  border-radius: 50%;
+
+  display: flex;
+   z-index:-1;
+  justify-content: left;
+  align-items: left;
+  width: 30px;
+  height: 30px;
+  background-color: blue;
+  color: blue;
+  border: transparent;
+  cursor: pointer;
+}
+button {
+  border-radius: 50%;
+  display: flex;
+  justify-content: left;
+  align-items: left;
+  width: 30px;
+  height: 30px;
+  background-color: blue;
+  color: blue;
+  border: transparent;
+  cursor: pointer;
+}
+
+
+
+
+

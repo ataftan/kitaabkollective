@@ -1,0 +1,354 @@
+
+
+body{
+      font-family: "Director",monospace;
+      background-color: #d8470e;
+      padding: 0;
+      margin: 0; 
+      width: 100%;
+      height: 100%;
+      font-size: calc(15px + 0.390625vw);
+      overflow: hidden;
+}
+ 
+
+a:link {
+    text-decoration: none;
+    color: white;
+}
+
+a:visited {
+    text-decoration: none;
+    color: white;
+}
+
+::-moz-selection { /* Code for Firefox */
+  color: white;
+  background: blue;
+}
+
+
+
+
+/* main *- keeping the standard as 376px screensize which is of phone */
+
+.container {
+   display: grid;
+  place-items: center;
+  height: 100vh;
+  padding: 10px;
+
+}
+
+
+.img-container {  
+   position: relative;
+
+  
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    width: auto\9; /* ie8 */
+}
+
+
+
+.logo {
+  
+  width: 100%;
+  height: auto;
+  display: block;  
+  z-index: -1;
+  object-fit: cover;
+  
+  
+}
+.spinner {
+   animation-duration: 8s;
+   animation-iteration-count: 1;
+   animation-timing-function: all ease-out; 
+   animation-name: spin !important;
+
+}
+.spinner:hover{
+  animation-name: spin !important;
+}
+
+@keyframes spin {
+    from {
+        transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(360deg);
+    }
+}
+/*img {
+  -moz-user-select: none;
+-webkit-user-select: none;
+  user-select: none;
+    pointer-events: none;
+
+}
+*/
+
+
+
+
+.kitaab, .kollective {
+  position: absolute;
+  font-size: 5.4rem; 
+  letter-spacing:-10px;
+  pointer-events: none;
+
+
+}
+
+
+
+.kitaab{
+  
+  top: 10px;
+  left: 0px;
+
+}
+
+.kollective {
+  bottom:10px;
+  right:0px;
+
+}
+
+/* media queries */
+
+
+@media screen and (max-width: 576px) {
+  
+  .kitaab, .kollective {
+    
+    font-size: 4.3rem;
+  }
+}
+
+@media screen and (max-width:768px) and (min-width: 384px) {
+
+    .container {
+    grid-template-areas:
+      "text-top-left"
+      "image"
+      "text-bottom-right";
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+  }
+  
+   .image-container {
+    grid-area: image;
+    text-align: center;
+  }
+
+  .kitaab {
+  
+  
+   grid-area: text-top-left;
+   
+  
+}
+
+.kollective {
+ 
+  grid-area: text-bottom-right;
+}
+  
+  .logo {
+   /* Take up 100% of the container width on smaller screens */
+    width: 110%;
+  }
+}
+
+
+
+
+@media screen and (min-width:560px) { /* text transition to larger font */
+  
+    .container {
+    grid-template-areas:
+      "text-top-left"
+      "image"
+      "text-bottom-right";
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+  }
+  
+   .image-container {
+    grid-area: image;
+    text-align: center;
+  }
+  
+  .kitaab, .kollective {
+  position: absolute;
+  font-size: 5.8rem; 
+  letter-spacing:-10px;
+  pointer-events: none;
+
+
+}
+
+
+  .kitaab {
+  
+   grid-area: text-top-left;
+  
+   
+  
+}
+
+.kollective {
+  grid-area: text-bottom-right;
+}
+  
+
+}
+
+
+
+@media screen and (min-width:900px) { 
+  
+  
+  .kitaab, .kollective {
+  position: absolute;
+  font-size: 7rem; 
+  letter-spacing:-10px;
+  pointer-events: none;
+
+
+}
+
+
+  .kitaab {
+   grid-area: text-top-left;
+  
+   
+  
+}
+
+.kollective {
+  grid-area: text-bottom-right;
+}
+  
+ 
+
+}
+
+
+@media screen and (min-width:650px) { 
+
+  .logo {
+    width: 75%;
+    height: auto;
+    max-width: 75%;
+    position: relative;
+    left: 80px;
+  }
+}
+
+@media screen and (min-width:800px) { 
+
+  .logo {
+    width: 75%;
+    height: auto;
+    text-align: center;
+    position: relative;
+    left: 120px;
+  }
+}
+
+
+@media screen and (min-width:1000px) { 
+
+  .logo {
+    width: 75%;
+    height: auto;
+     position: relative;
+    left: 100px;
+    bottom: 43px;
+  }
+}
+
+
+/*kitaab text placement on larger screen */
+@media screen and (min-width:1000px) { 
+
+.kollective {
+  bottom:170px;
+  right:20px;
+}
+  
+}
+
+
+@media screen and (min-width:1054px) { 
+.logo {
+    width: 55%;
+    height: auto;
+     position: relative;
+    left: 150px;
+    bottom: 42px;
+  }
+.kollective {
+  bottom:140px;
+  right:40px;
+}
+  
+}
+
+
+
+
+/* menu bar */
+
+#menu {
+  text-align: center;
+
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	width: 100%;
+	margin: 0 auto;
+}
+#menu a {
+	
+	padding: .2em;
+  
+	display: block;
+	font-size: 1.8rem;
+	border-radius: 4em 3em 5em / 2.5em 3em;
+	transition: .3s border-radius;
+	font-style: italic;
+	letter-spacing: -0.06em;
+}
+
+#menu a:hover {
+background-color: blue;
+}
+
+
+/* fix publication button issue */
+button {
+  	
+	padding: .2em;
+	display: block;
+	font-size: 1.8rem;
+	border-radius: 4em 3em 5em / 2.5em 3em;
+	transition: .3s border-radius;
+	font-style: italic;
+	letter-spacing: -0.06em;
+  background-color: transparent;
+  border: transparent;
+}
+
+
+button: hover {
+  background-color: blue;
+}
+
